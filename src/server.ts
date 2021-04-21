@@ -7,23 +7,14 @@ import express from 'express';
  * yarn add ts-node-dev -D
  */
 
+import './database';
+import { routes } from './routes';
+
 const app = express();
 
-/**
- * GET, POST, PUT, DELETE
- */
+app.use(express.json());
 
-app.get('/', (request, response) => {
-  return response.json({
-    message: "Method get"
-  });
-});
-
-app.post('/', (request, response) => {
-  return response.json({
-    message: "Method post"
-  });
-});
+app.use(routes);
 
 app.listen(3030, () => {
   console.log('Server is running on port 3030');
