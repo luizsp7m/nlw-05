@@ -1,6 +1,5 @@
-import { http } from './http';
+import { http } from "./http";
 import "./websocket/client";
+import "./websocket/admin";
 
-http.listen(3030, () => {
-  console.log('Server is running on port 3030');
-})
+http.listen(3333, () => console.log("Server is running on port 3333"));

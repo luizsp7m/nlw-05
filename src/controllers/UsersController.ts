@@ -1,5 +1,5 @@
-import { Request, Response } from 'express';
-import { UsersService } from '../services/UsersService';
+import { Request, Response } from "express";
+import { UsersService } from "../services/UsersService";
 
 class UsersController {
   async create(request: Request, response: Response): Promise<Response> {
@@ -13,4 +13,4 @@ class UsersController {
   }
 }
 
-export { UsersController }
+export { UsersController };
